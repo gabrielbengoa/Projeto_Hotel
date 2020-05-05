@@ -9,10 +9,17 @@ header .painel {
   width: 100%;
 }
 #modal1 img,
-#modal2 img {
+#modal2 img,
+#modal3 img,
+#modal4 img {
   width: 100%;
   height: 400px;
 }
 .card-image img {
   cursor: pointer;
+}
+#historia {
+  text-align: center;
+  padding: 20px;
+  margin-bottom: 50px;
 }
