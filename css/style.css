@@ -23,3 +23,8 @@ header .painel {
   padding: 20px;
   margin-bottom: 50px;
 }
+#sex_masculino,
+#sex_feminino {
+  margin-left: 50px !important;
+  position: relative;
+}

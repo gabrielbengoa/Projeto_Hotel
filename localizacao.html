@@ -29,6 +29,9 @@
       <nav>
         <div class="nav-wrapper red darken-4" style="text-align: left;">
           <a href="index.html" class="brand-logo">Hotel Piemonte</a>
+          <a href="#" data-target="mobile-demo" class="sidenav-trigger"
+            ><i class="material-icons">menu</i></a
+          >
           <ul id="nav-mobile" class="right hide-on-med-and-down">
             <li><a href="hotel.html">Hotel</a></li>
             <li><a href="suites.html">Suites</a></li>
@@ -36,6 +39,12 @@
             <li><a href="reservas.html">Reservas</a></li>
             <li><a href="localizacao.html">Localização</a></li>
           </ul>
+          <ul class="sidenav" id="mobile-demo"></ul>
+          <li><a href="hotel.html">Hotel</a></li>
+          <li><a href="suites.html">Suites</a></li>
+          <li><a href="gastronomia.html">Gastronomia</a></li>
+          <li><a href="reservas.html">Reservas</a></li>
+          <li><a href="localizacao.html">Localização</a></li>
         </div>
       </nav>
       <!--fim da barra de navegação-->
@@ -44,11 +53,29 @@
       <img src="img/painel2.jpg" alt="entrada do hotel" class="painel" />
     </header>
 
-    <main></main>
+    <main>
+      <h2>Onde Estamos</h2>
+      <hr />
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3654.695270921993!2d-46.724017084869125!3d-23.651081770797237!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce51213e209c63%3A0xc92c292471785af5!2sHotel%20Transamerica%20S%C3%A3o%20Paulo!5e0!3m2!1spt-BR!2sbr!4v1588705110850!5m2!1spt-BR!2sbr"
+        width="100%"
+        height="650"
+        frameborder="0"
+        style="border: 0;"
+        allowfullscreen=""
+        aria-hidden="false"
+        tabindex="0"
+      ></iframe>
+    </main>
 
     <footer></footer>
-
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <!-- Compiled and minified JavaScript -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script>
+      $(document).ready(function () {
+        $(".sidenav").sidenav();
+      });
+    </script>
   </body>
 </html>

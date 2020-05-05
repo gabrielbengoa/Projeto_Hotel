@@ -29,6 +29,9 @@
       <nav>
         <div class="nav-wrapper red darken-4" style="text-align: left;">
           <a href="index.html" class="brand-logo">Hotel Piemonte</a>
+          <a href="#" data-target="mobile-demo" class="sidenav-trigger"
+            ><i class="material-icons">menu</i></a
+          >
           <ul id="nav-mobile" class="right hide-on-med-and-down">
             <li><a href="hotel.html">Hotel</a></li>
             <li><a href="suites.html">Suites</a></li>
@@ -36,6 +39,12 @@
             <li><a href="reservas.html">Reservas</a></li>
             <li><a href="localizacao.html">Localização</a></li>
           </ul>
+          <ul class="sidenav" id="mobile-demo"></ul>
+          <li><a href="hotel.html">Hotel</a></li>
+          <li><a href="suites.html">Suites</a></li>
+          <li><a href="gastronomia.html">Gastronomia</a></li>
+          <li><a href="reservas.html">Reservas</a></li>
+          <li><a href="localizacao.html">Localização</a></li>
         </div>
       </nav>
       <!--fim da barra de navegação-->
@@ -44,11 +53,138 @@
       <img src="img/painel2.jpg" alt="entrada do hotel" class="painel" />
     </header>
 
-    <main></main>
+    <main>
+      <h2>Faça sua reserva</h2>
+      <hr />
+
+      <!-- ### Início da área do formulário -->
+      <div class="row">
+        <!-- início do formulário -->
+        <form class="col s12">
+          <!-- Primeira linha do formulário -->
+          <div class="row">
+            <div class="input-field col s6">
+              <i class="material-icons prefix">account_circle</i>
+              <input id="nomecompleto" type="text" class="validate" />
+              <label for="nomecompleto">Nome Completo</label>
+            </div>
+            <div class="input-field col s6">
+              <i class="material-icons prefix">email</i>
+              <input id="email" type="email" class="validate" />
+              <label for="email">E-Mail</label>
+            </div>
+            <!-- fim da primeira linha do formulário -->
+          </div>
+
+          <!-- Segunda linha do formulário -->
+          <div class="row">
+            <div class="input-field col s3">
+              <i class="material-icons prefix">local_phone</i>
+              <input id="telefone" type="tel" class="validate" />
+              <label for="telefone">Telefone</label>
+            </div>
+
+            <div class="input-field col s3">
+              <i class="material-icons prefix">dock</i>
+              <input id="cpf" type="text" class="validate" />
+              <label for="cpf">CPF</label>
+            </div>
+
+            <div class="input-field col s3">
+              <i class="material-icons prefix">date_range</i>
+              <input id="datanascimento" type="text" class="datepicker" />
+              <label for="datanascimento">Data de Nascimento</label>
+            </div>
+
+            <div class="input-field col s3">
+              <i class="material-icons prefix">people</i>
+              <label>Sexo</label>
+              <label id="sex_masculino">
+                <input name="sexo" type="radio" value="M" />
+                <span>Masculino</span>
+              </label>
+
+              <label id="sex_feminino">
+                <input name="sexo" type="radio" value="F" />
+                <span>Feminino</span>
+              </label>
+            </div>
+
+            <!-- fim da segunda linha do formulário -->
+          </div>
+
+          <hr />
+
+          <!-- Terceira linha do formulário -->
+          <div class="row">
+            <div class="input-field col s4">
+              <i class="material-icons prefix">hotel</i>
+              <select class="icons">
+                <option value="" disabled selected>Escolha sua Suite</option>
+                <option value="" data-icon="img/suite1.jpg"
+                  >Suite Single</option
+                >
+                <option value="" data-icon="img/suite2.jpg"
+                  >Suite Double</option
+                >
+                <option value="" data-icon="img/suite3.jpg"
+                  >Suite Master</option
+                >
+              </select>
+              <label>Selecione a Suite</label>
+            </div>
+
+            <div class="input-field col s4">
+              <i class="material-icons prefix">date_range</i>
+              <input type="text" class="datepicker" />
+              <label for="Check-In">Check-In</label>
+            </div>
+
+            <div class="input-field col s4">
+              <i class="material-icons prefix">date_range</i>
+              <input type="text" class="datepicker" />
+              <label for="Check-Out">Check-Out</label>
+            </div>
+            <!-- fim da terceira linha do formulário -->
+          </div>
+
+          <hr />
+
+          <button
+            class="btn waves-effect waves-light"
+            type="submit"
+            name="action"
+          >
+            Submit
+            <i class="material-icons right">check</i>
+          </button>
+
+          <!-- fim do formulário -->
+        </form>
+      </div>
+      <!-- ### Fim da área do formulário -->
+    </main>
 
     <footer></footer>
 
+    <br />
+    <br />
+    <br />
+    <br />
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <!-- Compiled and minified JavaScript -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script>
+      $(document).ready(function () {
+        $(".datepicker").datepicker();
+      });
+      $(document).ready(function () {
+        $("select").formSelect();
+      });
+      $(document).ready(function () {
+        $(".sidenav").sidenav();
+      });
+    </script>
   </body>
 </html>
